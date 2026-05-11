@@ -7,9 +7,10 @@ const Cart = () => {
   const navigate = useNavigate();
 
   const totalAmount = cart.cartItems.reduce(
-    (total, item) => total + item.caloriesPerServing *item.quantity,
-    0);
-    console.log(totalAmount);
+    (total, item) => total + item.caloriesPerServing * item.quantity,
+    0,
+  );
+  console.log(totalAmount);
 
   return (
     <div className="min-h-screen bg-gray-100 py-30 px-4">
@@ -32,29 +33,36 @@ const Cart = () => {
                       <h2 className="text-lg font-semibold text-gray-800">
                         {item.name}
                       </h2>
-                      <p className="text-gray-500">Rs. {item.caloriesPerServing}</p>
+                      <p className="text-gray-500">
+                        Rs. {item.caloriesPerServing}
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <button className="w-8 h-8 bg-gray-200 rounded-md hover:bg-gray-300 transition"
-                    onClick={()=>{
-                        dispatch({type:"decrement", payload: item.id})
-                    }}>
+                    <button
+                      className="w-8 h-8 bg-gray-200 rounded-md hover:bg-gray-300 transition"
+                      onClick={() => {
+                        dispatch({ type: "decrement", payload: item.id });
+                      }}
+                    >
                       -
                     </button>
                     <span className="text-lg font-medium">{item.quantity}</span>
-                    <button className="w-8 h-8 bg-gray-200 rounded-md hover:bg-gray-300 transition"
-                    onClick={()=>{
-                        dispatch({type:"increment", payload: item.id})
-                    }} >
+                    <button
+                      className="w-8 h-8 bg-gray-200 rounded-md hover:bg-gray-300 transition"
+                      onClick={() => {
+                        dispatch({ type: "increment", payload: item.id });
+                      }}
+                    >
                       +
                     </button>
                   </div>
-                  <button className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
-                  onClick={()=>{
-                    dispatch({type:"remove-item", payload: item.id})
-                  }}
+                  <button
+                    className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                    onClick={() => {
+                      dispatch({ type: "remove-item", payload: item.id });
+                    }}
                   >
                     Delete
                   </button>
@@ -69,7 +77,12 @@ const Cart = () => {
 
               <div className="flex justify-between mb-2 text-gray-600">
                 <span>Total Items</span>
-                <span>{cart.cartItems.length}</span>
+                <span>
+                  {cart.cartItems.reduce(
+                    (total, item) => total + item.quantity,
+                    0,
+                  )}
+                </span>
               </div>
 
               <div className="flex justify-between text-lg font-semibold border-t pt-4">
@@ -77,10 +90,12 @@ const Cart = () => {
                 <span>Rs. {totalAmount}</span>
               </div>
 
-              <button className="w-full mt-6 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition"
-              onClick={()=>{
-                navigate("/payment",{state:totalAmount})
-              }}>
+              <button
+                className="w-full mt-6 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition"
+                onClick={() => {
+                  navigate("/payment", { state: totalAmount });
+                }}
+              >
                 Proceed to Checkout
               </button>
             </div>

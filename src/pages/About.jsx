@@ -3,10 +3,10 @@ import bgabout from "../assets/images/bgabout.png";
 
 const About = () => {
   return (
-    <div className="w-full bg-white">
+    <div className="py-10 ">
       <section className="w-7xl m-auto px-14 py-10 flex flex-col-2 gap-45 items-center">
         <div>
-          <p className="text-teal-600 text-4xl mb-10 font-serif italic">
+          <p className="text-teal-600 text-4xl mt-20 mb-10 font-serif italic">
             About Us
           </p>
           <p className="text-lg text-gray-400 mb-4">WE PRIDE OURSELF ON</p>

@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { CartContext } from "../context/CartProvider";
+import { FaStar } from "react-icons/fa";
 
 const ProductDetail = () => {
   const { state } = useLocation();
-  const {cart, dispatch} = useContext (CartContext);
+  const { cart, dispatch } = useContext(CartContext);
   console.log(cart);
   const recipe = state;
 
@@ -47,9 +48,7 @@ const ProductDetail = () => {
 
               <div className="bg-gray-100 p-4 rounded-xl">
                 <p className="text-gray-500">Price</p>
-                <p className="font-semibold">
-                 RS. {recipe.caloriesPerServing}
-                </p>
+                <p className="font-semibold">RS. {recipe.caloriesPerServing}</p>
               </div>
 
               <div className="bg-gray-100 p-4 rounded-xl">
@@ -59,8 +58,10 @@ const ProductDetail = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <span className="text-yellow-500 text-xl">⭐</span>
+              <FaStar className="text-yellow-500 text-xl" />
+
               <span className="font-semibold">{recipe.rating}</span>
+
               <span className="text-gray-500">
                 ({recipe.reviewCount} reviews)
               </span>
@@ -77,10 +78,11 @@ const ProductDetail = () => {
               ))}
             </div>
 
-            <button className="bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-2xl text-lg font-semibold transition active:scale-95"
-            onClick={()=>{
-              dispatch({type:"add-item", payload: recipe});
-            }}
+            <button
+              className="bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-2xl text-lg font-semibold transition active:scale-95"
+              onClick={() => {
+                dispatch({ type: "add-item", payload: recipe });
+              }}
             >
               Add To Cart
             </button>
