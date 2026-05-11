@@ -4,6 +4,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { GiHotMeal, GiCook } from "react-icons/gi";
 import { MdCelebration } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import happyC from "../assets/images/happyC.png";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -188,7 +189,7 @@ const Hero = () => {
 
         <div className="flex justify-center">
           <img
-            src="src/assets/images/happyC.jpg"
+            src={happyC}
             className="w-100 h-140 rounded-xl shadow-lg"
             alt="customer"
           />

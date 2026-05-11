@@ -1,6 +1,9 @@
 import React from 'react'
 import bgabout from "../assets/images/bgabout.png";
-
+import chef1 from "../assets/images/chef1.png";
+import momo1 from "../assets/images/momo1.png";
+import momo2 from "../assets/images/momo2.png";
+import momo3 from "../assets/images/momo3.png";
 const About = () => {
   return (
     <div className="py-10 ">
@@ -17,7 +20,7 @@ const About = () => {
         </div>
 
         <div className="flex justify-center">
-          <img src="src/assets/images/chef1.png" alt="chef1" className="w-90" />
+          <img src={chef1} alt="chef1" className="w-90" />
         </div>
       </section>
 
@@ -56,13 +59,13 @@ const About = () => {
               modi facilis repellendus.
             </p>
           </div>
-          <img src="src/assets/images/momo1.png" alt="Momo"
+          <img src={momo1} alt="Momo"
             className="rounded-lg w-100 shadow-lg"
           />
         </div>
 
         <div className="flex flex-col-2 gap-50 items-center">
-          <img src="src/assets/images/momo2.png" alt="momos"
+          <img src={momo2} alt="momos"
             className="rounded-lg w-100 shadow-lg"
           />
           <div className="max-w-md">
@@ -94,7 +97,7 @@ const About = () => {
               nesciunt quidem perferendis?
             </p>
           </div>
-          <img src="src/assets/images/momo3.png" alt=""
+          <img src={momo3} alt=""
             className="rounded-lg w-100 shadow-lg"
           />
         </div>
