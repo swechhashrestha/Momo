@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import chef from "../assets/images/chef.png";
+import bgservice from "../assets/images/bgservice.png";
+import party from "../assets/images/party.png";
 
 const Service = () => {
   return (
@@ -18,13 +21,13 @@ const Service = () => {
         </div>
 
         <div className="flex justify-center">
-          <img className="w-100" src="src/assets/images/chef.png" alt="Chef" />
+          <img className="w-100" src={chef} alt="Chef" />
         </div>
       </section>
 
       <section
         className="relative bg-center bg-cover bg-no-repeat py-28 mb-20"
-        style={{ backgroundImage: `url(src/assets/images/bgservice.png)` }}
+      style={{ backgroundImage: `url(${bgservice})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/40"></div>
         <div className="relative z-10 w-7xl flex items-end  m-auto px-16">
@@ -59,13 +62,13 @@ const Service = () => {
           </div>
         </div>
         <div className="bg-white shadow-lg rounded-xl">
-          <img src="src/assets/images/party.png" alt="" className="w-full h-90" />
+          <img src={party} alt="" className="w-full h-90" />
         </div>
       </section>
 
       <section className="w-6xl m-auto px-8 py-20 flex flex-col-2 justify-center gap-40">
         <div className="bg-white shadow-lg rounded-xl">
-          <img src="src/assets/images/party.png" alt="" className="w-full h-90" />
+          <img src={party} alt="" className="w-full h-90" />
         </div>
         <div className="p-6 w-110 shadow-lg rounded-xl">
           <h3 className="text-xl font-bold">Catering</h3>

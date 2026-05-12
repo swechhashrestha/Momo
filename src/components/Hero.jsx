@@ -4,7 +4,12 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { GiHotMeal, GiCook } from "react-icons/gi";
 import { MdCelebration } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import happyC from "../assets/images/happyC.png";
+import happyC from "../assets/images/happyC.jpg";
+import oneBg from "../assets/images/oneBg.jpeg";
+import momopic from "../assets/images/momo-pic.png";
+import c from "../assets/images/c.png";
+import customers from "../assets/images/customers.png";
+import processbg from "../assets/images/process-bg.jpg";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -19,7 +24,7 @@ const Hero = () => {
               <span
                 className="bg-no-repeat w-48 text-white text-center  bg-center inline-block  "
                 style={{
-                  backgroundImage: `url(src/assets/images/oneBg.jpeg)`,
+                  backgroundImage: `url(${oneBg})`,
                 }}
               >
                 #One
@@ -49,12 +54,12 @@ const Hero = () => {
         <div className="h-[750px] w-[40%] overflow-hidden flex justify-end relative">
           <img
             className="absolute z-10 top-[28%] w-[500px] right-[60px]"
-            src="src/assets/images/momo-pic.png"
+            src={momopic}
             alt="momo"
           />
           <img
             className="absolute h-[100%] -top-10 right-0"
-            src="src/assets/images/c.png"
+            src={c}
             alt="background"
           />
         </div>
@@ -62,7 +67,7 @@ const Hero = () => {
 
       <section className="grid grid-cols-2 gap-8 m-auto px-20 py-20 -mt-20 items-center">
         <img
-          src="src/assets/images/customers.png"
+          src={customers}
           alt="chef"
           className="w-120 mx-auto"
         />
@@ -99,7 +104,7 @@ const Hero = () => {
         </div>
         <div className="relative h-[700px] flex items-center justify-center text-center text-white">
           <img
-            src="/src/assets/images/process-bg.jpg"
+            src={processbg}
             alt="process"
             className="absolute w-full h-full object-cover"
           />
