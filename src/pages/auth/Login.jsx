@@ -17,7 +17,7 @@ const Login = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <h2 className="text-xl font-semibold text-green-600">
-          You are already logged in ✅
+          You are already logged in ✅ 
         </h2>
       </div>
     );
@@ -28,7 +28,6 @@ const Login = () => {
       <div className="bg-white p-8 rounded-2xl shadow-lg w-96">
         <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
 
-        {/* Email Login Form (optional custom backend) */}
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
             <label className="block text-sm mb-1">Email</label>
@@ -100,3 +99,5 @@ const Login = () => {
 };
 
 export default Login;
+
+// 1QT62YDHXSA3KLJPH1TWRHC8

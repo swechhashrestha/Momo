@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaFacebook, FaTiktok, FaInstagram } from "react-icons/fa";
 import { useAuth0 } from "@auth0/auth0-react";
+import momo from "../assets/images/momo.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const Navbar = () => {
             to="./"
             className="flex gap-2 justify-center items-center h-8"
           >
-            <img src="src/assets/images/momo.png" alt="logo" className="w-8 h-full" />
+            <img src={momo} alt="logo" className="w-8 h-full" />
             <h5 className="text-[#0C6967] font-bold text-[25px] pb-1">momos</h5>
           </NavLink>
         </div>
